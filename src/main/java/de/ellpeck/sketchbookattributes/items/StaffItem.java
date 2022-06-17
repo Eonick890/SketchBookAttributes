@@ -79,11 +79,11 @@ public class StaffItem extends Item {
                         applyTargetEffect(player, player, new EffectInstance(Effects.HEAL, 0, 1));
                         break;
                     case SPEED:
-                        if (!applyTargetEffect(player, new EffectInstance(Effects.MOVEMENT_SPEED, 3 * 20, 1)))
+                        applyTargetEffect(player, new EffectInstance(Effects.MOVEMENT_SPEED, 3 * 20, 1))
                             return ActionResult.fail(stack);
                         break;
                     case STRENGTH:
-                        if (!applyTargetEffect(player, new EffectInstance(Effects.DAMAGE_BOOST, 5 * 20)))
+                        applyTargetEffect(player, new EffectInstance(Effects.DAMAGE_BOOST, 5 * 20))
                             return ActionResult.fail(stack);
                         break;
                     case METEORS:

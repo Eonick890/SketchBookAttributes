@@ -44,8 +44,7 @@ public enum PlayerClass {
     SPELLCASTER(0, 5, 0, 15, 5, (p, a) -> {
         if (a.mana < 15)
             return false;
-        ItemStack fruit = new ItemStack(Items.CHORUS_FRUIT);
-        fruit.finishUsingItem(p.level, p);
+            applyTargetEffect(player, player, new EffectInstance(Effects.DAMAGE_BOOST, 1 * 50));
         if (!p.isCreative())
             a.mana -= 15;
         return true;

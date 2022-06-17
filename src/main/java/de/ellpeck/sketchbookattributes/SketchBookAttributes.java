@@ -33,11 +33,11 @@ public class SketchBookAttributes {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ID);
     public static final RegistryObject<StaffItem> STAFF_TIER_1 = ITEMS.register("staff_tier_1",
-            () -> new StaffItem(Mode.FIRE_BALL));
-    public static final RegistryObject<StaffItem> STAFF_TIER_2 = ITEMS.register("staff_tier_2",
             () -> new StaffItem(Mode.FIRE_BALL, Mode.JUMP, Mode.ICE_BALL));
+    public static final RegistryObject<StaffItem> STAFF_TIER_2 = ITEMS.register("staff_tier_2",
+            () -> new StaffItem(Mode.FIRE_BALL, Mode.JUMP, Mode.ICE_BALL, Mode.HEAL));
     public static final RegistryObject<StaffItem> STAFF_TIER_3 = ITEMS.register("staff_tier_3",
-            () -> new StaffItem(Mode.FIRE_BALL, Mode.JUMP, Mode.ICE_BALL, Mode.HEAL, Mode.SPEED));
+            () -> new StaffItem(Mode.FIRE_BALL, Mode.JUMP, Mode.ICE_BALL, Mode.HEAL, Mode.SPEED, Mode.STRENGTH));
     public static final RegistryObject<StaffItem> STAFF_MASTER = ITEMS.register("staff_master",
             () -> new StaffItem(Mode.FIRE_BALL, Mode.JUMP, Mode.ICE_BALL, Mode.HEAL, Mode.SPEED, Mode.STRENGTH, Mode.METEORS));
     public static final RegistryObject<TridentLikeItem> DAGGER = ITEMS.register("dagger", () -> new TridentLikeItem(180, 3, -2.1, 4));
